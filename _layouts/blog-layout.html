@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<section class="section-blog">
+  <div class="container">
+
+    {{ content }}
+
+    <aside class="four columns offset-by-one sidebar">
+
+      <h4 class="subtitle">Categories</h4>
+      <div class="listbox1">
+        <ul>
+          <li><a href="#">Testing </a></li>
+          <li><a href="#">Code Challenges</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something Else</a></li>
+        </ul>
+      </div>
+      <!-- end-listbox1 -->
+      <br class="clear">
+      <h4 class="subtitle">Text Widget</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<a href="#"> exercitation</a> ut labore et dolore magna aliqua. Ut enim ad</p>
+      <br class="clear">
+      <h4 class="subtitle">Archives</h4>
+      <div class="listbox1">
+        <ul>
+          {% for post in site.posts | limit:20 %}
+          <li><a href="{{ post.url }}"> {{post.date | date: '%b. %d, %Y' }} {{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- end-listbox1 -->
+    </aside>
+    <!-- end-sidebar-->
+
+    <br class="clear">
+
+
+    <span id="scroll-top"><a class="scrollup"><i class="icomoon-arrow-up"></i></a></span> </div>
+    <!-- end-wrap -->
+    <!-- End Document -->
+
+    <br class="clear">
+
+    <div class="vertical-space2"></div>
+  </div>
+</section>
