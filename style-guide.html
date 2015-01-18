@@ -1,0 +1,144 @@
+---
+layout: default
+---
+
+
+
+<!-- Begin About the Team -->
+<section class="container">
+  <hr class="vertical-space1">
+  <div class="sixteen columns">
+    <hr class="vertical-space2">
+    <h4 class="subtitle">Meet the Team</h4>
+    <hr class="vertical-space1">
+    <div class="one_third">
+      <figure class="our-team"> <img src="images/chuck.jpg" alt="">
+        <figcaption>
+          <h4><strong>Chuck Lauer Vose<br>
+          <small>CFO <em>(Chief Fun Officer)</em></small></strong></h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean nisl orci aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
+          </p>
+          <div class="socailfollow">
+            <a href="#" class="twitter"><i class="icomoon-twitter"></i></a> <a href="#" class="github"><i class="icomoon-github"></i></a> <a href="#" class="linkedin"><i class="icomoon-linkedin"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      <!-- end Our Team -->
+    </div>
+    <div class="one_third">
+      <figure class="our-team"> <img src="images/erica2.jpg" alt=""> <!-- img size = 300x300 -->
+        <figcaption>
+          <h4><strong>Erica Lauer Vose<br>
+          <small>Senior Adventure Strategist</small></strong></h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean nisl orci aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
+          </p>
+          <div class="socailfollow">
+            <a href="#" class="twitter"><i class="icomoon-twitter"></i></a> <a href="#" class="github"><i class="icomoon-github"></i></a> <a href="#" class="linkedin"><i class="icomoon-linkedin"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      <!-- end Our Team -->
+    </div>
+    <div class="one_third column-last">
+      <figure class="our-team"> <img src="images/kale_300x300.png" alt="">
+        <figcaption>
+          <h4><strong>Kale<br>
+          <small>Head Dinosaur Advisor</small></strong></h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean nisl orci aliqua.adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..
+          </p>
+          <div class="socailfollow">
+            <a href="#" class="twitter"><i class="icomoon-twitter"></i></a> <a href="#" class="github"><i class="icomoon-github"></i></a> <a href="#" class="linkedin"><i class="icomoon-linkedin"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      <!-- end Our Team -->
+    </div>
+    <hr class="vertical-space3">
+  </div>
+</section>
+<!-- END About the Team -->
+
+<!-- Begin Blog Page & Sidebar -->
+<section class="section-blog">
+  <div class="container">
+
+
+    <section class="eleven columns">
+
+      {% for post in site.posts | limit:1 %}
+      <article class="blog-post">
+        <div class="one columns alpha frame">
+          <div class="blog-date-sec"> <span>{{ post.date | date: '%B' }}</span>
+            <h3>{{ post.date | date: '%d' }}</h3>
+            <span>{{ post.date | date: '%Y' }}</span>
+          </div>
+        </div>
+        <div class="ten columns omega">
+          <div class="img-container">
+            <img class="frame" src="{{ post.image-thumb }}" alt="">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <div class="postmetadata">
+              <span>by </span><h6 class="blog-author"> {{ post.author }}</h6>
+              <span>in </span><h6 class="blog-author"> {{ post.category }}</h6>
+            </div>
+          </div>
+
+          <p style="margin-left: 60px;">{{ post.content | strip_html | truncate: 200}}</p>
+          <a href="{{ post.url }}"><btn style="float: right;" class="btn btn-sm btn-info"><strong>Read More</strong></btn></a>
+
+        </div>
+
+        <br class="clear">
+
+      </article>
+      {% endfor %}
+
+      <!-- {{ content }} -->
+    </section>
+
+    <aside class="four columns offset-by-one sidebar">
+
+      <h4 class="subtitle">Categories</h4>
+      <div class="listbox1">
+        <ul>
+          <li><a href="#">Tech</a></li>
+          <li><a href="#">Code Challenges</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Professional Development</a></li>
+        </ul>
+      </div>
+      <!-- end-listbox1 -->
+      <!-- <br class="clear">
+      <h4 class="subtitle">Text Widget</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<a href="#"> exercitation</a> ut labore et dolore magna aliqua. Ut enim ad</p> -->
+      <br class="clear">
+      <h4 class="subtitle">More Blog Posts</h4>
+      <div class="listbox1">
+        <ul>
+          {% for post in site.posts | limit:20 %}
+          <li><a href="{{ post.url }}"> {{post.date | date: '%b. %d, %Y' }} {{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- end-listbox1 -->
+    </aside>
+    <!-- end-sidebar-->
+
+    <br class="clear">
+
+
+    <span id="scroll-top"><a class="scrollup"><i class="icomoon-arrow-up"></i></a></span> </div>
+    <!-- end-wrap -->
+    <!-- End Document -->
+
+    <br class="clear">
+
+    <div class="vertical-space2"></div>
+  </div>
+</section>
+<!-- END Blog Page & Sidebar -->
+
+
