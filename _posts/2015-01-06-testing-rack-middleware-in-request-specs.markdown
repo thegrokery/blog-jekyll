@@ -1,6 +1,8 @@
 ---
 layout: post
-categories: tech
+date:   2015-01-06
+category: Tech Topic
+category_url: tech-topic
 title: Testing rack middleware in a request spec
 tags: testing
 ---

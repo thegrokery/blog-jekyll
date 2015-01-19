@@ -4,7 +4,7 @@ layout: blog-layout
 
 <section class="eleven columns">
 
-  {% for post in site.posts | limit:20 %}
+  {% for post in site.categories.profesional-skills | limit:20 %}
   <article class="blog-post">
     <div class="one columns alpha frame">
       <div class="blog-date-sec"> <span>{{ post.date | date: '%B' }}</span>
@@ -18,7 +18,7 @@ layout: blog-layout
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <div class="postmetadata">
           <span>by </span><h6 class="blog-author"> {{ post.author }}</h6>
-          <span>in </span><h6 class="blog-author"><a href="{{ post.category_url }}.html">{{ post.category }}</a></h6>
+          <span>in </span><h6 class="blog-author"> {{ post.category }}</h6>
         </div>
       </div>
 

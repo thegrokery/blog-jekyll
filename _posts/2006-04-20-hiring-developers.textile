@@ -1,8 +1,9 @@
 ---
 layout: post
-categories: tech
+category: Tech Topic
 title: Hiring developers
 typo_id: 2
+category_url: tech-topic
 ---
 h2. Background
 
