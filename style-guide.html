@@ -230,7 +230,8 @@ layout: default
         line-height: 30px;
         margin-bottom: .75rem;
         font-weight: 600;
-        letter-spacing: .1rem; }
+        letter-spacing: .1rem;
+      }
     </style>
     <div class="container example-grid">
       <div class="row">
@@ -327,15 +328,16 @@ layout: default
 <section class="section-blog">
   <div class="container">
     <section class="eleven columns">
-
       {% for post in site.posts | limit:1 %}
       <article class="blog-post">
+
         <div class="one columns alpha frame">
           <div class="blog-date-sec"> <span>{{ post.date | date: '%B' }}</span>
             <h3>{{ post.date | date: '%d' }}</h3>
             <span>{{ post.date | date: '%Y' }}</span>
           </div>
         </div>
+
         <div class="ten columns omega">
           <div class="img-container">
             <img class="frame" src="{{ post.image-thumb }}" alt="">
@@ -345,14 +347,11 @@ layout: default
               <span>in </span><h6 class="blog-author"> {{ post.category }}</h6>
             </div>
           </div>
-
           <p style="margin-left: 60px;">{{ post.content | strip_html | truncate: 200}}</p>
           <a href="{{ post.url }}"><btn style="float: right;" class="btn btn-sm btn-info"><strong>Read More</strong></btn></a>
-
         </div>
 
         <br class="clear">
-
       </article>
       {% endfor %}
 
@@ -387,8 +386,29 @@ layout: default
     <br class="clear">
 
     <div class="vertical-space2"></div>
-  </div>
-</section>
-<!-- END Blog Page & Sidebar -->
+  </section>
+  <!-- END Blog Page & Sidebar -->
 
 
+  <section class="section-blog">
+    <div class="container">
+      {% for page in site.posts | limit:1 %}
+      <section class="eleven columns">
+        <article class="blog-single-post"> <img src="{{ page.image-main }}" alt=""><br>
+          <div class="post">
+            <div class="postmetadata">
+              <h6 class="blog-author">{{ page.date | date: '%B %d %Y' }} / <strong>by</strong>  {{ page.author }} / <strong>in</strong> <a href="{{ page.category_url }}.html">{{ page.category }}</a></h6>
+            </div>
+            <h1>{{ page.title }}</h1>
+            <p> {{ page.content | truncate:400 }}</p>
+            <br class="clear">
+            <hr class="boldbx">
+          </div>
+        </article>
+      </section>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>
+<!-- End .wrapper -->
