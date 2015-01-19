@@ -1,0 +1,9 @@
+---
+layout: post
+
+categories: life
+published: false
+title: Woot, Ding!
+typo_id: 17
+---
+My boss doesn't know the phrase "Woot, ding!" or the proper response of "gratz"; I don't know whether to feel sympathy for him or be greatly relieved...
