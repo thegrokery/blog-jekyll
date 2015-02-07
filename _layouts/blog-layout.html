@@ -12,7 +12,7 @@ layout: default
 
     <aside class="four columns offset-by-one sidebar">
 
-      <h4 class="subtitle">Categories</h4>
+      <h4>Categories</h4>
       <div class="listbox1">
         <ul>
           {% for category in site.cat_map %}
@@ -22,13 +22,13 @@ layout: default
       </div>
       <!-- end-listbox1 -->
       <!-- <br class="clear">
-      <h4 class="subtitle">Text Widget</h4>
+      <h4>Text Widget</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<a href="#"> exercitation</a> ut labore et dolore magna aliqua. Ut enim ad</p> -->
       <br class="clear">
-      <h4 class="subtitle">More Blog Posts</h4>
+      <h4>More Blog Posts</h4>
       <div class="listbox1">
         <ul>
-          {% for post in site.posts | limit:20 %}
+          {% for post in site.posts | limit:10 %}
           <li><a href="{{ post.url }}"> {{post.date | date: '%b. %d, %Y' }} {{ post.title }}</a></li>
           {% endfor %}
         </ul>
