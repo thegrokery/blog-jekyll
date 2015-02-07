@@ -1,44 +1,106 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="/css/style.css" type="text/css"  media="all">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900|Roboto|Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="/css/color-skins.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/icomoon.css">
+
+  <!-- JS
+  ================================================== -->
+  <script type="text/javascript" src="/js/vendor/jquery.min.js" ></script>
+  <!--[if lt IE 9]>
+    <script src="/js/vendor/modernizr.custom.11889.js" type="text/javascript"></script>
+  <![endif]-->
+  <script type="text/javascript" src="/js/nav-resp.js"></script>
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="images/kale-favicon.png">
+</head>
+
+<body>
   <div id="wrap" class="colorskin-6">
 
-    {% include head.html %}
+    <div id="sticker">
+      <header id="header">
+        <div class="container">
+          <div class="eight columns logo">
+            <a href="/blog.html"><img src="/images/kale2.png" width="80" id="img-logo" alt="logo" style="float: left; margin-right: 10px;">
+              <h1 style="margin-bottom: .25em;">Lauer Vose Blog</h1>
+              <h3 style="margin-top: .15em;"><small><strong><em>Teaching dinosaurs to code since 2010</em></strong></small></h3>
+            </a>
+          </div>
+          <nav id="nav-wrap" class="nav-wrap1 eight columns">
+            <ul id="nav">
+              <li>
+                <a  href="/blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="/about.html">About</a>
+              </li>
+              <li>
+                <a  href="http://chuck.lauervose.com/">Chuck</a>
+              </li>
+              <li>
+                <a href="http://erica.lauervose.com/">Erica</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /nav-wrap -->
+        </div>
+      </header>
+    </div>
+    <!-- end-header -->
 
-    <body>
+    <section class="container page-content" >
+      <section class="eleven columns">
 
-      {% include header.html %}
+        {{ content }}
 
-        <section class="container page-content" >
-          <section class="eleven columns">
+        <br class="clear">
 
-            {{ content }}
+        <div class="vertical-space2"></div>
+      </section>
+      <!-- end-main-content -->
 
+      <br class="clear">
+    </section>
+    <!-- end-container -->
 
-            <br class="clear">
+    {% include footer.html %}
 
-            <div class="vertical-space2"></div>
-          </section>
-              <!-- end-main-content -->
-
-          <br class="clear">
-        </section>
-        <!-- container -->
-
-      {% include footer.html %}
-
-      <!-- end-wrap -->
-      <!-- End Document
-      ================================================== -->
-      <script type="text/javascript" src="/js/mexin-custom.js" ></script>
-      <script type="text/javascript" src="/js/doubletaptogo.js" ></script>
-      <script type="text/javascript" src="/js/jquery.sticky.js"></script>
-      <script src="/js/bootstrap-alert.js"></script>
-      <script src="/js/bootstrap-dropdown.js"></script>
-      <script src="/js/bootstrap-tab.js"></script>
-      <script src="/js/bootstrap-tooltip.js"></script>
-    </body>
-
+    <!-- end-wrap -->
   </div>
-
+  <!-- End Document
+  ================================================== -->
+  <script type="text/javascript" src="/js/vendor/doubletaptogo.js" ></script>
+  <script type="text/javascript" src="/js/vendor/jquery.sticky.js"></script>
+  <script type="text/javascript" src="/js/vendor/bootstrap-alert.js"></script>
+  <script type="text/javascript" src="/js/vendor/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="/js/vendor/bootstrap-tab.js"></script>
+  <script type="text/javascript" src="/js/vendor/bootstrap-tooltip.js"></script>
+  <script type="text/javascript" src="/js/mexin-custom.js" ></script>
+</body>
 </html>
