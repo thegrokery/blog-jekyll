@@ -17,8 +17,8 @@ layout: blog-layout
         <img class="frame" src="{{ post.image-thumb }}" alt="">
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <div class="postmetadata">
-          <span>by </span><h6 class="blog-author"> {{ post.author }}</h6>
-          <span>in </span><h6 class="blog-author"><a href="{{ post.category_url }}.html">{{ post.category }}</a></h6>
+          <span>by </span><h6 class="blog-author"><a href="mailto:{{ site.authors[post.author].email }}">{{ site.authors[post.author].name }}</a></h6>
+          <span>in </span><h6 class="blog-author"><a href="{{ site.cat_map[post.category].url }}">{{ site.cat_map[post.category].name }}</a></h6>
         </div>
       </div>
 

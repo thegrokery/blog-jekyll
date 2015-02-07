@@ -15,10 +15,9 @@ layout: default
       <h4 class="subtitle">Categories</h4>
       <div class="listbox1">
         <ul>
-          <li><a href="/tech-topic.html">Tech Topics</a></li>
-          <li><a href="/code-challenge.html">Code Challenges</a></li>
-          <li><a href="/tutorial.html">Tutorials</a></li>
-          <li><a href="/professional-skills.html">Professional Skills</a></li>
+          {% for category in site.cat_map %}
+          <li><a href="{{ category[1].url }}">{{ category[1].name }}</a></li>
+          {% endfor %}
         </ul>
       </div>
       <!-- end-listbox1 -->

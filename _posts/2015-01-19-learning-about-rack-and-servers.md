@@ -4,6 +4,7 @@ date:   2015-01-19
 category: tech
 title: Learning about Rack and servers in general
 tags: rack
+author: chuck
 ---
 
 **tl;dr - webservers (generally) send HTML responses to browsers, but the HTML doesn't have to be in a file, we could build it dynamically for each request. The HTTP path is just a hint.**
